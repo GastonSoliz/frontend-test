@@ -1,0 +1,27 @@
+.headerContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: black;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.image {
+  width: 160px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid white;
+  overflow: hidden;
+}
+
+.headerContainer h1 {
+  color: white;
+}
+
+@media (min-width: 800px) {
+  .headerContainer {
+    justify-content: center;
+    gap: 15rem;
+  }
+}

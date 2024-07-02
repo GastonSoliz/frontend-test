@@ -1,0 +1,45 @@
+.aboutContainer p {
+  margin-top: 10px;
+}
+
+.tech {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px 0;
+}
+
+.tech li {
+  list-style: none;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.text2 {
+  padding: 0 20px;
+}
+
+@media (min-width: 800px) {
+  .aboutContainer p {
+    margin-top: 10px;
+    padding: 0 40px;
+  }
+  .tech {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .tech li {
+    font-size: 18px;
+  }
+  .text2 {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1220px) {
+  .tech {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .tech li {
+    font-size: 18px;
+  }
+}
