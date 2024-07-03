@@ -33,7 +33,7 @@ export default function ContactForm() {
     const validationErrors = validateForm(data);
     setErrors(validationErrors);
     setShowAlert(true);
-    setTimeout(() => setShowAlert(false), 2000);
+    setTimeout(() => setShowAlert(false), 5000);
 
     if (Object.keys(validationErrors).length > 0) {
       setSuccess(false);
@@ -49,9 +49,9 @@ export default function ContactForm() {
         <div className={style.formInput}>
           <div className={style.formDiv}>
             <label htmlFor="name">
-              Nombre<span className={style.required}>*</span>:{" "}
+              Nombre<span className={style.required}>*</span>:
             </label>
-            <input type="text" name="name" onChange={handleChange} />
+            <input id="name" type="text" name="name" onChange={handleChange} />
           </div>
           <span className={style.errors}>{errors.name}</span>
         </div>
@@ -60,7 +60,12 @@ export default function ContactForm() {
             <label htmlFor="email">
               Correo<span className={style.required}>*</span>:
             </label>
-            <input type="text" name="email" onChange={handleChange} />
+            <input
+              id="email"
+              type="text"
+              name="email"
+              onChange={handleChange}
+            />
           </div>
           <span className={style.errors}>{errors.email}</span>
         </div>
@@ -69,7 +74,7 @@ export default function ContactForm() {
             <label htmlFor="message">
               Mensaje<span className={style.required}>*</span>:
             </label>
-            <textarea name="message" onChange={handleChange} />
+            <textarea id="message" name="message" onChange={handleChange} />
           </div>
           <span className={style.errors}>{errors.message}</span>
         </div>

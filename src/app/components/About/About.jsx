@@ -1,6 +1,21 @@
 import style from "./about.module.css";
 
 export default function About() {
+  const technologies = [
+    "HTML",
+    "CSS",
+    "GIT",
+    "Javascript",
+    "Typescript",
+    "React",
+    "Next.js",
+    "Redux",
+    "Node.js",
+    "Express",
+    "Sequelize",
+    "PostgreSQL",
+    "MySQL",
+  ];
   return (
     <section className={style.aboutContainer}>
       <h2>Sobre mi</h2>
@@ -9,19 +24,9 @@ export default function About() {
         aplicar los conocimientos obtenidos en tecnologías como:
       </p>
       <ul className={style.tech}>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>GIT</li>
-        <li>Javascript</li>
-        <li>Typescript</li>
-        <li>React</li>
-        <li>Next.js</li>
-        <li>Redux</li>
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>Sequelize</li>
-        <li>PostgreSQL</li>
-        <li>MySQL</li>
+        {technologies.map((tech, index) => (
+          <li key={index}>{tech}</li>
+        ))}
       </ul>
       <p className={style.text2}>
         Me considero una persona comprometida, disciplinada y empática.
