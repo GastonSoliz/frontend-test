@@ -11,8 +11,13 @@
   width: 160px;
   height: 200px;
   border-radius: 50%;
-  border: solid white;
+  border: solid 2px white;
   overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.1);
 }
 
 .headerContainer h1 {
